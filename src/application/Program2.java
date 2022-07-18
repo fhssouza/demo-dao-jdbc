@@ -27,6 +27,11 @@ public class Program2 {
 			System.out.println(obj);
 		}
 		
+		System.out.println("\n=== TEST 3: seller insert ===");
+		Department newDep = new Department(null, "D2");
+		departmentDao.insert(newDep);
+		System.out.println("Inserted! New id = " + newDep.getId());
+		
 		sc.close();
 	}
 
