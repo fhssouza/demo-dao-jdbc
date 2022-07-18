@@ -27,10 +27,16 @@ public class Program2 {
 			System.out.println(obj);
 		}
 		
-		System.out.println("\n=== TEST 3: seller insert ===");
+		System.out.println("\n=== TEST 3: Department insert ===");
 		Department newDep = new Department(null, "D2");
 		departmentDao.insert(newDep);
 		System.out.println("Inserted! New id = " + newDep.getId());
+		
+		System.out.println("\n=== TEST 4: Department update ===");
+		department = departmentDao.findById(7);
+		department.setName("D3");
+		departmentDao.update(department);
+		System.out.println("Updated completed");
 		
 		sc.close();
 	}
